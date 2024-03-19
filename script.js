@@ -7,13 +7,15 @@ const userName = "Chelsy";
 const isOpen = true;
 
 const type = typeof userName;
-console.log(type);
+console.log(type); // print()
 
 const message = "Do you want to extend your subscription?";
 const shouldExtend = confirm(message);
 console.log(shouldExtend);
 
-let quantity = prompt("Enter your number");
+let quantity = prompt("Enter your number"); // input()
+// try:
+// except
 try {
   quantityChanged = Number(quantity);
   console.log(typeof quantityChanged);
