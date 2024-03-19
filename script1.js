@@ -8,3 +8,8 @@ console.log(`Result: ${result}`);
 let elementHeight = "200.74px";
 elHeight = Number.parseFloat(elementHeight);
 console.log(`elementHeight: ${elHeight}`);
+
+let salary = 1300.16472;
+salary = Number(salary.toFixed(2));
+console.log(salary);
+console.log(typeof salary);
