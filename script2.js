@@ -7,3 +7,7 @@ const lastName = "Smith";
 
 const fullName = firstName + " " + lastName;
 console.log(fullName);
+
+let brand = "SamSung";
+brand = brand.toLowerCase();
+console.log(brand);
