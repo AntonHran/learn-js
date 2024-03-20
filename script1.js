@@ -31,5 +31,5 @@ alert(`Result is ${res}`);
 const max = 80;
 const min = 10;
 
-let randomNumber = Math.round(Math.random() * (max - min) + min, 2);
+let randomNumber = Math.round(Math.random() * (max - min) + min);
 console.log(randomNumber);
