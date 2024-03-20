@@ -27,3 +27,9 @@ let baseNumber = prompt("Enter a base: ");
 let powerNumber = prompt("Enter a power for your base: ");
 const res = Number(baseNumber) ** Number(powerNumber);
 alert(`Result is ${res}`);
+
+const max = 80;
+const min = 10;
+
+let randomNumber = Math.round(Math.random() * (max - min) + min, 2);
+console.log(randomNumber);
