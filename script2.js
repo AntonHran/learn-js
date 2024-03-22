@@ -74,3 +74,26 @@ function checkStorage(available, ordered) {
 }
 
 console.log(checkStorage(10, 5));
+
+// switch ... case!
+function getSubscriptionPrice(type) {
+  let price;
+
+  switch (type) {
+    case "starter":
+      price = 0;
+      break;
+
+    case "professional":
+      price = 20;
+      break;
+
+    case "organization":
+      price = 50;
+      break;
+  }
+
+  return price;
+}
+
+console.log(getSubscriptionPrice("starter"));
