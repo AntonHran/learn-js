@@ -33,3 +33,11 @@ function makeOrderMessage(orderedQuantity, pricePerDroid, deliveryFee) {
 }
 
 console.log(makeOrderMessage(2, 100, 50));
+
+function isAdult(age) {
+  const passed = age >= 18;
+  return passed;
+}
+
+console.log(isAdult(20));
+console.log(isAdult(10));
