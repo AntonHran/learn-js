@@ -65,3 +65,37 @@ console.log(clients1.indexOf("Monkong")); // -1
 // includes()
 console.log(clients1.includes("Poly")); // true
 console.log(clients1.includes("Monkong")); // false
+
+// push()
+const numbers = [];
+
+numbers.push(1);
+console.log(numbers); // [1]
+
+numbers.push(2);
+console.log(numbers); // [1, 2]
+
+numbers.push(3);
+console.log(numbers); // [1, 2, 3]
+
+numbers.push(4);
+console.log(numbers); // [1, 2, 3, 4]
+
+numbers.push(5);
+console.log(numbers); // [1, 2, 3, 4, 5]
+
+// pop()
+console.log(numbers.pop()); //  5
+console.log(numbers); // [1, 2, 3, 4]
+
+console.log(numbers.pop()); //  4
+console.log(numbers); // [1, 2, 3]
+
+console.log(numbers.pop()); //  3
+console.log(numbers); // [1, 2]
+
+console.log(numbers.pop()); //  2
+console.log(numbers); // [1]
+
+console.log(numbers.pop()); //  1
+console.log(numbers); // []
