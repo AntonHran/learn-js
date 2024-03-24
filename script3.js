@@ -44,15 +44,24 @@ for (const character of string) {
 }
 
 // massives - lists in python
+// split()
 const name = "Mango";
 console.log(name.split("")); // ["M", "a", "n", "g", "o"]
 
 const message = "JavaScript - це цікаво";
 console.log(message.split(" ")); // ["JavaScript", "-", "це", "цікаво"]
 
-// join
-
+// join()
 const words = ["JavaScript", "це", "цікаво"];
 console.log(words.join("")); // "JavaScriptцецікаво"
 console.log(words.join(" ")); // "JavaScript це цікаво"
 console.log(words.join("-")); // "JavaScript-це-цікаво"
+
+// indexOf()
+const clients1 = ["Mango", "Ajax", "Poly", "Kiwi"];
+console.log(clients1.indexOf("Poly")); // 2
+console.log(clients1.indexOf("Monkong")); // -1
+
+// includes()
+console.log(clients1.includes("Poly")); // true
+console.log(clients1.includes("Monkong")); // false
