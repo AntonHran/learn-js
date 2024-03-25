@@ -83,3 +83,11 @@ const res = bookShelf.getBooks();
 console.log(res);
 bookShelf.addBook("Нова книга");
 console.log(bookShelf);
+
+// for ... in
+for (const key in book) {
+  // Ключ
+  console.log(key);
+  // Значення властивості з таким ключем
+  console.log(book[key]);
+}
