@@ -23,3 +23,7 @@ console.log(location1); // Об'єкт location
 
 const country = user.location.country;
 console.log(country); // 'Jamaica'
+console.log(location1.city);
+
+const userName = user["name"];
+console.log(userName);
