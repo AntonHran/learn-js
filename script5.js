@@ -61,3 +61,23 @@ const user3 = {
 };
 
 console.log(user3.name); // 'Генрі Сибола'
+
+// object methods!!!
+// ✅ Логічно і синтаксично згруповані сутності
+const bookShelf = {
+  books: ["The Last Kingdom", "Dream Guardian"],
+  // Це метод об'єкта
+  getBooks() {
+    console.log("Цей метод буде повертати всі книги - властивість books");
+  },
+  // Це метод об'єкта
+  addBook(bookName) {
+    console.log("Цей метод буде додавати нову книгу у властивість books");
+    this.books.push(bookName);
+  },
+};
+
+// Виклики методів
+bookShelf.getBooks();
+bookShelf.addBook("Нова книга");
+console.log(bookShelf);
