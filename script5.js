@@ -102,3 +102,21 @@ for (const key in book) {
 
   // Якщо це невласна властивість - нічого не робимо
 }
+
+const animal = {
+  legs: 4,
+};
+const dog = Object.create(animal);
+dog.name = "Манго";
+
+console.log(dog); // {name: 'Манго'}
+console.log(dog.name); // 'Манго'
+console.log(dog.legs); // 4
+
+// ❌ Повертає true для всіх властивостей
+console.log("name" in dog); // true
+console.log("legs" in dog); // true
+
+// ✅ Повертає true тільки для власних властивостей
+console.log(dog.hasOwnProperty("name")); // true
+console.log(dog.hasOwnProperty("legs")); // false
