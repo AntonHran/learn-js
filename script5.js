@@ -69,6 +69,7 @@ const bookShelf = {
   // Це метод об'єкта
   getBooks() {
     console.log("Цей метод буде повертати всі книги - властивість books");
+    return this.books;
   },
   // Це метод об'єкта
   addBook(bookName) {
@@ -78,6 +79,7 @@ const bookShelf = {
 };
 
 // Виклики методів
-bookShelf.getBooks();
+const res = bookShelf.getBooks();
+console.log(res);
 bookShelf.addBook("Нова книга");
 console.log(bookShelf);
