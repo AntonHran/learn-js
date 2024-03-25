@@ -91,3 +91,14 @@ for (const key in book) {
   // Значення властивості з таким ключем
   console.log(book[key]);
 }
+
+// hasOwnProperty()
+for (const key in book) {
+  // Якщо це власна властивість - виконуємо тіло if
+  if (book.hasOwnProperty(key)) {
+    console.log(key);
+    console.log(book[key]);
+  }
+
+  // Якщо це невласна властивість - нічого не робимо
+}
