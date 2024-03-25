@@ -8,6 +8,13 @@ const book = {
 };
 console.log(book);
 
+book.pageCount = 836;
+book.originalLanguage = "en";
+book.translations = ["ua", "ru"];
+
+console.log(book);
+
+// new example
 const user = {
   name: "Jacques Gluke",
   tag: "jgluke",
@@ -27,3 +34,20 @@ console.log(location1.city);
 
 const userName = user["name"];
 console.log(userName);
+
+// shorthand properties
+const name = "Генрі Сибола";
+const age = 25;
+
+const user1 = {
+  name: name,
+  age: age,
+};
+
+console.log(user1); // old version!!!
+
+// new version
+const userNew = {
+  name,
+  age,
+};
