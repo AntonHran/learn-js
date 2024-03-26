@@ -216,3 +216,39 @@ function multiply(firstNumber, secondNumber, ...otherArgs) {
 multiply(1, 2);
 multiply(1, 2, 3);
 multiply(1, 2, 3, 4);
+
+// pattern object of parameters
+function doStuffWithBook(book) {
+  // Робимо щось з властивостями об'єкта
+  console.log(book.title);
+  console.log(book.numberOfPages);
+  // І так далі
+}
+
+// ✅ Все зрозуміло
+doStuffWithBook({
+  title: "The Last Kingdom",
+  numberOfPages: 736,
+  downloads: 10283,
+  rating: 8.38,
+  isPublic: true,
+});
+
+function doStuffWithBook(book) {
+  const { title, numberOfPages, downloads, rating, isPublic } = book;
+  console.log(title);
+  console.log(numberOfPages);
+  // І так далі
+}
+
+function doStuffWithBook({
+  title,
+  numberOfPages,
+  downloads,
+  rating,
+  isPublic,
+}) {
+  console.log(title);
+  console.log(numberOfPages);
+  // І так далі
+}
