@@ -120,3 +120,18 @@ console.log("legs" in dog); // true
 // ✅ Повертає true тільки для власних властивостей
 console.log(dog.hasOwnProperty("name")); // true
 console.log(dog.hasOwnProperty("legs")); // false
+
+// Object.keys()
+const book1 = {
+  title: "The Last Kingdom",
+  author: "Bernard Cornwell",
+  genres: ["historical prose", "adventure"],
+  rating: 8.38,
+};
+const keys = Object.keys(book1);
+console.log(keys); // ['title', 'author', 'genres', 'rating']
+
+for (const key of keys) {
+  console.log(key);
+  console.log(book1[key]);
+}
