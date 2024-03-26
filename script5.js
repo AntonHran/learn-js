@@ -135,3 +135,11 @@ for (const key of keys) {
   console.log(key);
   console.log(book1[key]);
 }
+
+// Object.values()
+const values = Object.values(book);
+console.log(values);
+
+// Object.entires()
+const entries = Object.entries(book);
+console.log(entries);
