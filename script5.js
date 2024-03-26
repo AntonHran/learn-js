@@ -170,3 +170,49 @@ for (const book of books) {
 }
 
 console.log(bookNames);
+
+// ...spread
+const temps = [14, -4, 25, 8, 11];
+
+// В консолі буде масив
+console.log(temps);
+// ❌ Так не спрацює, тому що передаємо цілий масив
+console.log(Math.max(temps)); // NaN
+
+// В консолі буде набір окремих чисел
+console.log(...temps);
+// ✅ Розподілимо колекцію елементів у якості окремих аргументів
+console.log(Math.max(...temps)); // 25
+
+// Це точна, але незалежна копія масиву temps
+const copyOfTemps = [...temps];
+console.log(copyOfTemps); // [14, -4, 25, 8, 11]
+
+const lastWeekTemps = [14, 25, 11];
+const currentWeekTemps = [23, 17, 18];
+const allTemps = [...lastWeekTemps, ...currentWeekTemps];
+console.log(allTemps); // [14, 25, 11, 23, 17, 18]
+
+const first = { propA: 5, propB: 10 };
+const second = { propC: 15 };
+const third = { ...first, ...second };
+console.log(third); // { propA: 5, propB: 10, propC: 15 }
+
+// rest
+function multiply(...args) {
+  console.log(args); // масив усіх аргументів
+}
+
+multiply(1, 2);
+multiply(1, 2, 3);
+multiply(1, 2, 3, 4);
+
+function multiply(firstNumber, secondNumber, ...otherArgs) {
+  console.log(firstNumber); // Значення першого аргументу
+  console.log(secondNumber); // Значення другого аргументу
+  console.log(otherArgs); // Масив інших аргументів
+}
+
+multiply(1, 2);
+multiply(1, 2, 3);
+multiply(1, 2, 3, 4);
