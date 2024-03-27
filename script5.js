@@ -252,3 +252,12 @@ function doStuffWithBook({
   console.log(numberOfPages);
   // І так далі
 }
+
+// test examples:
+const emailInputName = "email";
+const passwordInputName = "password";
+
+const credentials = {
+  [emailInputName]: "henry.carter@aptmail.com",
+  [passwordInputName]: "jqueryismyjam",
+};
