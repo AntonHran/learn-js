@@ -308,5 +308,17 @@ function getAllPropValues(propName) {
 //   return res;
 // }
 
+// function getAllPropValues(propName) {
+//   let res = [];
+//   const keys = Object.keys(products[0]);
+//   if (!keys.includes(propName)) {
+//   return res;}
+//   } else {
+//     for (const obj of products) {
+//       res.push(obj[propName]);
+//   }
+//   return res;
+// }
+
 console.log(getAllPropValues("quantity"));
 console.log(getAllPropValues("category"));
