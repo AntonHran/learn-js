@@ -266,6 +266,7 @@ function countProps(object) {
   // Change code below this line
   let propCount = 0;
   const keys = Object.keys(object);
+  console.log(keys);
   for (const key of keys) {
     if (object.hasOwnProperty(key)) {
       propCount += 1;
@@ -276,3 +277,38 @@ function countProps(object) {
 }
 
 console.log(countProps({ mail: "poly@mail.com", isOnline: true, score: 500 }));
+
+const products = [
+  { name: "Radar", price: 1300, quantity: 4 },
+  { name: "Scanner", price: 2700, quantity: 3 },
+  { name: "Droid", price: 400, quantity: 7 },
+  { name: "Grip", price: 1200, quantity: 9 },
+];
+
+// function getAllPropValues(propName) {
+//   let res = [];
+//   for (const obj of products) {
+//     if (obj[propName]) {
+//       res.push(obj[propName]);
+//     } else {
+//       return res;
+//     }
+//   }
+//   return res;
+// }
+
+function getAllPropValues(propName) {
+  let res = [];
+  const keys = Object.keys(products[0]);
+  if (keys.includes(propName)) {
+    for (const obj of products) {
+      res.push(obj[propName]);
+    }
+  } else {
+    return res;
+  }
+  return res;
+}
+
+console.log(getAllPropValues("quantity"));
+console.log(getAllPropValues("category"));
