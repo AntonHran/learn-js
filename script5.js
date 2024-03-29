@@ -285,12 +285,20 @@ const products = [
   { name: "Grip", price: 1200, quantity: 9 },
 ];
 
+// function getAllPropValues(propName) {
+//   let res = [];
+//   for (const obj of products) {
+//     if (obj[propName]) {
+//       res.push(obj[propName]);
+//     }
+//   }
+//   return res;
+// }
+
 function getAllPropValues(propName) {
   let res = [];
   for (const obj of products) {
-    if (obj[propName]) {
-      res.push(obj[propName]);
-    }
+    obj[propName] ? res.push(obj[propName]) : res;
   }
   return res;
 }
