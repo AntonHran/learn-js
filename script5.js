@@ -381,34 +381,36 @@ const atTheOldToad = {
   getPotions() {
     return this.potions;
   },
+  getPoitonNames() {
+    let potionNames = [];
+    for (const potion of this.potions) {
+      potionNames.push(potion.name);
+    }
+    return potionNames;
+  },
   addPotion(newPotion) {
-    if (!this.potions.includes(newPotion)) {
+    names = this.getPoitonNames();
+    if (!this.potions.includes(newPotion) && !names.includes(newPotion.name)) {
       this.potions.push(newPotion);
     } else {
       return `Error! Potion ${newPotion} is already in your inventory!`;
     }
   },
   removePotion(potionName) {
-    let potionNames = [];
-    for (const potion of this.potions) {
-      potionNames.push(potion.name);
-    }
-    if (!potionNames.includes(potionName)) {
+    names = this.getPoitonNames();
+    if (!names.includes(potionName)) {
       return `Potion ${potionName} is not in inventory!`;
     } else {
-      let potionIndex = potionNames.indexOf(potionName);
+      let potionIndex = names.indexOf(potionName);
       this.potions.splice(potionIndex, 1);
     }
   },
   updatePotionName(oldName, newName) {
-    let potionNames = [];
-    for (const potion of this.potions) {
-      potionNames.push(potion.name);
-    }
-    if (!potionNames.includes(oldName)) {
+    names = this.getPoitonNames();
+    if (!names.includes(oldName)) {
       return `Potion ${oldName} is not in inventory!`;
     } else {
-      const potionIndex = potionNames.indexOf(oldName);
+      const potionIndex = names.indexOf(oldName);
       console.log(potionIndex);
       this.potions[potionIndex].name = newName;
     }
