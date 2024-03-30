@@ -369,3 +369,52 @@ const bookShelf1 = {
 
 console.log(bookShelf1.addBook("Red sunset"));
 console.log(bookShelf1.removeBook("Red sunset"));
+
+// last example in ht3:
+const atTheOldToad = {
+  potions: [
+    { name: "Speed potion", price: 460 },
+    { name: "Dragon breath", price: 780 },
+    { name: "Stone skin", price: 520 },
+  ],
+  // Change code below this line
+  getPotions() {
+    return this.potions;
+  },
+  addPotion(newPotion) {
+    if (!this.potions.includes(newPotion)) {
+      this.potions.push(newPotion);
+    } else {
+      return `Error! Potion ${newPotion} is already in your inventory!`;
+    }
+  },
+  removePotion(potionName) {
+    let potionNames = [];
+    for (const potion of this.potions) {
+      potionNames.push(potion.name);
+    }
+    if (!potionNames.includes(potionName)) {
+      return `Potion ${potionName} is not in inventory!`;
+    } else {
+      let potionIndex = potionNames.indexOf(potionName);
+      this.potions.splice(potionIndex, 1);
+    }
+  },
+  updatePotionName(oldName, newName) {
+    let potionNames = [];
+    for (const potion of this.potions) {
+      potionNames.push(potion.name);
+    }
+    if (!potionNames.includes(oldName)) {
+      return `Potion ${oldName} is not in inventory!`;
+    } else {
+      const potionIndex = potionNames.indexOf(oldName);
+      console.log(potionIndex);
+      this.potions[potionIndex].name = newName;
+    }
+  },
+  // Change code above this line
+};
+
+console.log(atTheOldToad.getPotions());
+console.log(atTheOldToad.updatePotionName("Dragon breath", "Polymorth"));
