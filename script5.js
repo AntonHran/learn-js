@@ -349,14 +349,16 @@ const bookShelf1 = {
   // Change code below this line
   books: ["The last kingdom", "The guardian of dreams"],
   getBooks() {
-    return "Returning all books";
+    return this.books;
   },
   addBook(bookName) {
     this.books.push(bookName);
+    console.log(this.getBooks());
     return `Adding book ${bookName}`;
   },
   removeBook(bookName) {
-    delete this.books[this.books.includes(bookName)];
+    delete this.books[this.books.indexOf(bookName)];
+    console.log(this.getBooks());
     return `Deleting book ${bookName}`;
   },
   updateBook(oldName, newName) {
