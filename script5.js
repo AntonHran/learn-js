@@ -377,7 +377,6 @@ const atTheOldToad = {
     { name: "Dragon breath", price: 780 },
     { name: "Stone skin", price: 520 },
   ],
-  // Change code below this line
   getPotions() {
     return this.potions;
   },
@@ -389,24 +388,26 @@ const atTheOldToad = {
     return potionNames;
   },
   addPotion(newPotion) {
-    names = this.getPoitonNames();
+    const names = this.getPoitonNames();
     if (!this.potions.includes(newPotion) && !names.includes(newPotion.name)) {
       this.potions.push(newPotion);
     } else {
       return `Error! Potion ${newPotion} is already in your inventory!`;
     }
+    return this.potions;
   },
   removePotion(potionName) {
-    names = this.getPoitonNames();
+    const names = this.getPoitonNames();
     if (!names.includes(potionName)) {
       return `Potion ${potionName} is not in inventory!`;
     } else {
       let potionIndex = names.indexOf(potionName);
       this.potions.splice(potionIndex, 1);
     }
+    return this.potions;
   },
   updatePotionName(oldName, newName) {
-    names = this.getPoitonNames();
+    const names = this.getPoitonNames();
     if (!names.includes(oldName)) {
       return `Potion ${oldName} is not in inventory!`;
     } else {
@@ -414,9 +415,20 @@ const atTheOldToad = {
       console.log(potionIndex);
       this.potions[potionIndex].name = newName;
     }
+    return this.potions;
   },
-  // Change code above this line
 };
 
 console.log(atTheOldToad.getPotions());
+console.log(atTheOldToad.addPotion({ name: "Invisibility", price: 620 }));
+console.log(atTheOldToad.addPotion({ name: "Power potion", price: 270 }));
+console.log(atTheOldToad.addPotion({ name: "Dragon breath", price: 700 }));
+console.log(atTheOldToad.addPotion({ name: "Stone skin", price: 240 }));
+console.log(atTheOldToad.addPotion({ name: "Dragon breath", price: 700 }));
+console.log(atTheOldToad.addPotion({ name: "Stone skin", price: 240 }));
+console.log(atTheOldToad.removePotion("Dragon breath"));
+console.log(atTheOldToad.removePotion("Speed potion"));
 console.log(atTheOldToad.updatePotionName("Dragon breath", "Polymorth"));
+console.log(
+  atTheOldToad.updatePotionName("Stone skin", "Invulnerability potion")
+);
