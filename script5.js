@@ -330,3 +330,15 @@ function getAllPropValues(propName) {
 
 console.log(getAllPropValues("quantity"));
 console.log(getAllPropValues("category"));
+
+// rest
+
+function add(...args) {
+  let total = 0;
+  for (const el of args) {
+    total += el;
+  }
+  return total;
+}
+
+console.log(add(1, 2, 3));
