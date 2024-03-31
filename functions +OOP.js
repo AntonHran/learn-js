@@ -76,7 +76,7 @@ class Car {
 }
 
 // destruction
-class Car {
+class Car1 {
   constructor({ brand, model, price }) {
     this.brand = brand;
     this.model = model;
@@ -94,15 +94,15 @@ class StringBuilder {
   }
 
   padEnd(str) {
-    this.value.concat(str);
+    this.value = this.value.concat(str);
   }
 
   padStart(str) {
-    str.concat(this.value);
+    this.value = str.concat(this.value);
   }
 
   padBoth(str) {
-    str.concat(this.value).concat(str);
+    this.value = str.concat(this.value).concat(str);
   }
 }
 
