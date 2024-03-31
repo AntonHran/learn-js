@@ -52,3 +52,16 @@ const historyService = {
     return this.orders.filter((order) => order.email === email);
   },
 };
+
+// 3 inheritation of objects
+const parent = {
+  name: "Stacey",
+  surname: "Moore",
+  age: 54,
+  heritage: "Irish",
+};
+
+const child = Object.create(parent);
+child.name = "Jason";
+child.age = 27;
+console.log(child);
