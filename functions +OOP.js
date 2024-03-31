@@ -65,3 +65,53 @@ const child = Object.create(parent);
 child.name = "Jason";
 child.age = 27;
 console.log(child);
+
+// 4 classes
+class Car {
+  constructor(brand, model, price) {
+    this.brand = brand;
+    this.model = model;
+    this.price = price;
+  }
+}
+
+// destruction
+class Car {
+  constructor({ brand, model, price }) {
+    this.brand = brand;
+    this.model = model;
+    this.price = price;
+  }
+}
+
+class StringBuilder {
+  constructor(initialValue) {
+    this.value = initialValue;
+  }
+
+  getValue() {
+    return this.value;
+  }
+
+  padEnd(str) {
+    this.value.concat(str);
+  }
+
+  padStart(str) {
+    str.concat(this.value);
+  }
+
+  padBoth(str) {
+    str.concat(this.value).concat(str);
+  }
+}
+
+// Change code above this line
+const builder = new StringBuilder(".");
+console.log(builder.getValue()); // "."
+builder.padStart("^");
+console.log(builder.getValue()); // "^."
+builder.padEnd("^");
+console.log(builder.getValue()); // "^.^"
+builder.padBoth("=");
+console.log(builder.getValue()); // "=^.^="
