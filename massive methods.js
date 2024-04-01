@@ -52,3 +52,30 @@ function leaveHoloMessage(name) {
 
 processCall("Манго", takeCall, activateAnsweringMachine);
 processCall("Полі", takeCall, leaveHoloMessage);
+
+// calback abstraction
+function printValue(value) {
+  console.log(value);
+}
+
+function prettyPrint(value) {
+  console.log("Logging value: ", value);
+}
+
+function repeat(n, action) {
+  for (let i = 0; i < n; i += 1) {
+    action(i);
+  }
+}
+
+// Передаємо printValue як callback-функцію
+repeat(3, printValue);
+// 0
+// 1
+// 2
+
+// Передаємо prettyPrint як callback-функцію
+repeat(3, prettyPrint);
+// Logging value: 0
+// Logging value: 1
+// Logging value: 2
