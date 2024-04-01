@@ -99,3 +99,36 @@ for (let i = 0; i < numbers.length; i += 1) {
 numbers.forEach(function (number, index) {
   console.log(`Індекс ${index}, значення ${number}`);
 });
+
+// arrow function
+// Звичайне оголошення функції
+function classicAdd(a, b, c) {
+  return a + b + c;
+}
+
+// Те саме стрілочною функцією
+const arrowAdd = (a, b, c) => {
+  return a + b + c;
+};
+
+// with one parameter:
+const add = (a) => {
+  return a + 5;
+};
+
+// without parameters:
+const greet1 = () => {
+  console.log("Привіт!");
+};
+
+// with rest:
+const add1 = (...args) => {
+  console.log(args);
+};
+
+add1(1, 2, 3); // [1, 2, 3]
+
+// Анонімна стрілочна функція
+numbers.forEach((number, index) => {
+  console.log(`Індекс ${index}, значення ${number}`);
+});
