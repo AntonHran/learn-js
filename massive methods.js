@@ -100,6 +100,16 @@ numbers.forEach(function (number, index) {
   console.log(`Індекс ${index}, значення ${number}`);
 });
 
+function calculateTotalPrice(orderedItems) {
+  let totalPrice = 0;
+
+  orderedItems.forEach(function (order, index) {
+    totalPrice += order;
+  });
+
+  return totalPrice;
+}
+
 // arrow function
 // Звичайне оголошення функції
 function classicAdd(a, b, c) {
