@@ -246,3 +246,32 @@ const colorPickerOptions = [
 colorPickerOptions.find((option) => option.label === "blue"); // { label: 'blue', color: '#2196F3' }
 colorPickerOptions.find((option) => option.label === "pink"); // { label: 'pink', color: '#E91E63' }
 colorPickerOptions.find((option) => option.label === "white"); // undefined
+
+// findIndex
+// масив.findIndex((element, index, array) => {
+// Тіло колбек-функції
+// });
+
+colorPickerOptions.findIndex((option) => option.label === "blue"); // 2
+colorPickerOptions.findIndex((option) => option.label === "pink"); // 3
+colorPickerOptions.findIndex((option) => option.label === "white"); // -1
+
+// every
+// Усі елементи більші або дорівнюють нулю? - так
+[1, 2, 3, 4, 5].every((value) => value >= 0); // true
+
+// Усі елементи більші або дорівнюють нулю? - ні
+[1, 2, 3, -10, 4, 5].every((value) => value >= 0); // false
+
+// some
+// Чи є хоча б один елемент, що більший або дорівнює нулю? - так
+[1, 2, 3, 4, 5].some((value) => value >= 0); // true
+
+// Чи є хоча б один елемент, що більший або дорівнює нулю? - так
+[-7, -20, 3, -10, -14].some((value) => value >= 0); // true
+
+// Чи є хоча б один елемент, що менший нуля? - ні
+[1, 2, 3, 4, 5].some((value) => value < 0); // false
+
+// Чи є хоча б один елемент, що менший нуля? - так
+[1, 2, 3, -10, 4, 5].some((value) => value < 0); // true
