@@ -324,3 +324,18 @@ const getTags = (tweets) =>
   }, []);
 
 console.log(getTags(tweets));
+
+//
+// sort
+const scores = [61, 19, 74, 35, 92, 56];
+const ascendingScores = [...scores].sort();
+
+console.log(scores); // [61, 19, 74, 35, 92, 56]
+console.log(ascendingScores); // [19, 35, 56, 61, 74, 92]
+
+// массив.sort((a, b) => {
+// Тіло колбек-функції
+// });
+
+const ascendingScores1 = [...scores].sort((a, b) => a - b);
+console.log(ascendingScores1); // [19, 35, 56, 61, 74, 92]
