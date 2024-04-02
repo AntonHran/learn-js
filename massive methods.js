@@ -275,3 +275,52 @@ colorPickerOptions.findIndex((option) => option.label === "white"); // -1
 
 // Чи є хоча б один елемент, що менший нуля? - так
 [1, 2, 3, -10, 4, 5].some((value) => value < 0); // true
+
+//
+// reduce
+// масив.reduce((previousValue, element, index, array) => {
+// Тіло колбек-функції
+// }, initialValue);
+
+const total = [2, 7, 3, 14, 6].reduce((previousValue, number) => {
+  return previousValue + number;
+}, 0);
+
+console.log(total); // 32
+
+// Назва акумулятора може бути довільною, це просто параметр функції
+const totalScore = students.reduce((total, student) => {
+  return total + student.score;
+}, 0);
+
+const averageScore = totalScore / students.length;
+
+const tweets = [
+  { id: "000", likes: 5, tags: ["js", "nodejs"] },
+  { id: "001", likes: 2, tags: ["html", "css"] },
+  { id: "002", likes: 17, tags: ["html", "js", "nodejs"] },
+  { id: "003", likes: 8, tags: ["css", "react"] },
+  { id: "004", likes: 0, tags: ["js", "nodejs", "react"] },
+];
+
+// Пройдемо по всіх елементах колекції і додамо значення властивості tags
+// до акумулятора, початкове значення якого вкажемо порожнім масивом [].
+// На кожній ітерації пушимо в акумулятор усі елементи tweet.tags і повертаємо його.
+const tags = tweets.reduce((allTags, tweet) => {
+  allTags.push(...tweet.tags);
+
+  return allTags;
+}, []);
+
+console.log(tags);
+
+// Мабуть, збирання тегів - не одиночна операція, тому напишемо функцію
+// для збирання тегів з колекції
+const getTags = (tweets) =>
+  tweets.reduce((allTags, tweet) => {
+    allTags.push(...tweet.tags);
+
+    return allTags;
+  }, []);
+
+console.log(getTags(tweets));
