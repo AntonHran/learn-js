@@ -339,3 +339,27 @@ console.log(ascendingScores); // [19, 35, 56, 61, 74, 92]
 
 const ascendingScores1 = [...scores].sort((a, b) => a - b);
 console.log(ascendingScores1); // [19, 35, 56, 61, 74, 92]
+
+//
+// tests
+function calculateTotalPrice(orderedItems) {
+  let totalPrice = 0;
+
+  orderedItems.forEach(function (item) {
+    totalPrice += item;
+  });
+
+  return totalPrice;
+}
+
+// const orderedItems = [1, 2, 3];
+const calculateTotalPrice = (orderedItems) => {
+  let totalPrice = 0;
+  orderedItems.forEach((item) => {
+    totalPrice += item;
+  });
+
+  return totalPrice;
+};
+
+console.log(calculateTotalPrice);
