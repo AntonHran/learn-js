@@ -352,8 +352,8 @@ function calculateTotalPrice(orderedItems) {
   return totalPrice;
 }
 
-// const orderedItems = [1, 2, 3];
-const calculateTotalPrice = (orderedItems) => {
+const orderedItemsE = [1, 2, 3];
+const calculateTotalPriceR = (orderedItems) => {
   let totalPrice = 0;
   orderedItems.forEach((item) => {
     totalPrice += item;
@@ -362,4 +362,11 @@ const calculateTotalPrice = (orderedItems) => {
   return totalPrice;
 };
 
-console.log(calculateTotalPrice);
+console.log(calculateTotalPriceR(orderedItemsE));
+
+let totalR = 0;
+const calc = (element) => {
+  totalR += element;
+};
+orderedItemsE.forEach(calc);
+console.log(totalR);
