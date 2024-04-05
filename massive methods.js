@@ -466,3 +466,12 @@ const getUsersWithFriend = (users, friendName) => {
 };
 
 console.log(getUsersWithFriend(usersEx, "Briana Decker"));
+
+const getFriends = (users) => {
+  const res = users
+    .flatMap((user) => user.friends)
+    .filter((friend, index, array) => array.indexOf(friend) === index);
+  return res;
+};
+
+console.log(getFriends(usersEx));
