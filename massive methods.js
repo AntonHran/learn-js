@@ -460,3 +460,9 @@ const usersEx = [
 ];
 
 console.log(getUsersWithAge(usersEx, 20, 30));
+
+const getUsersWithFriend = (users, friendName) => {
+  return users.filter((user) => user.friends.includes(friendName));
+};
+
+console.log(getUsersWithFriend(usersEx, "Briana Decker"));
