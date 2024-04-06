@@ -475,3 +475,54 @@ const getFriends = (users) => {
 };
 
 console.log(getFriends(usersEx));
+
+const getUserWithEmail = (users, email) => {
+  const res = users.find((user) => user.email === email);
+  return res;
+};
+
+console.log(getUserWithEmail(usersEx, "shereeanthony@kog.com"));
+
+// other example from ht:
+const books = [
+  {
+    title: "The Last Kingdom",
+    author: "Bernard Cornwell",
+    rating: 8.38,
+  },
+  {
+    title: "Beside Still Waters",
+    author: "Robert Sheckley",
+    rating: 8.51,
+  },
+  {
+    title: "The Dream of a Ridiculous Man",
+    author: "Fyodor Dostoevsky",
+    rating: 7.75,
+  },
+  { title: "Redder Than Blood", author: "Tanith Lee", rating: 7.94 },
+  { title: "Enemy of God", author: "Bernard Cornwell", rating: 8.67 },
+];
+
+const sortedByAuthorName = [...books].sort((first, second) =>
+  first.author.localeCompare(second.author)
+);
+
+const sortedByReversedAuthorName = [...books].sort((first, second) =>
+  second.author.localeCompare(first.author)
+);
+
+const sortedByAscendingRating = [...books].sort(
+  (first, second) => first.rating - second.rating
+);
+
+const sortedByDescentingRating = [...books].sort(
+  (first, second) => second.rating - first.rating
+);
+
+console.log(sortedByAuthorName);
+console.log("");
+console.log(sortedByReversedAuthorName);
+console.log("Robert Sheckley".localeCompare("Fyodor Dostoevsky"));
+console.log(sortedByDescentingRating);
+console.log(sortedByAscendingRating);
