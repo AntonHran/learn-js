@@ -39,3 +39,15 @@ console.log(imageEl.src);
 
 console.log(imageEl.hasAttribute("alt"));
 console.log(imageEl.hasAttribute("khkbk"));
+
+// data-attributes
+const actions = document.querySelectorAll(".js-actions button");
+console.log(actions);
+
+console.log(actions[0]);
+console.log(actions[0].dataset);
+console.log(actions[0].dataset.action);
+console.log(actions[1].dataset.action);
+console.log(actions[2].dataset.action);
+
+console.log(actions[1].getAttribute("data-action"));
