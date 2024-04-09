@@ -27,3 +27,8 @@ console.log(imageEl);
 console.log(imageEl.src);
 imageEl.src = "/images/radowan-nakif-rehan-cYyqhdbJ9TI-unsplash (1).jpg";
 imageEl.alt = "It's me)";
+
+const heroTitleEl = document.querySelector(".hero_title");
+console.log(heroTitleEl);
+const textHeroTitleEl = heroTitleEl.textContent;
+console.log(textHeroTitleEl);
