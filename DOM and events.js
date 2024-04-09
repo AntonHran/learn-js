@@ -51,3 +51,11 @@ console.log(actions[1].dataset.action);
 console.log(actions[2].dataset.action);
 
 console.log(actions[1].getAttribute("data-action"));
+
+// classList elements
+const navEl = document.querySelector(".menu");
+console.log(navEl);
+console.log(navEl.classList);
+navEl.classList.add("super-class"); // adding new class
+navEl.classList.remove("super-class");
+navEl.classList.toggle("superb"); // if not exist - add, if exist - delete
