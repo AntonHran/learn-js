@@ -1,3 +1,5 @@
+// elements
+
 const listWithClass = document.querySelector(".menu");
 console.log(listWithClass);
 
@@ -18,3 +20,10 @@ console.log(selectThroughEl);
 
 const selectThroughElAll = ulEl.querySelectorAll(".menu-item");
 console.log(selectThroughElAll);
+
+// properties of elements
+const imageEl = document.querySelector(".hero_image");
+console.log(imageEl);
+console.log(imageEl.src);
+imageEl.src = "/images/radowan-nakif-rehan-cYyqhdbJ9TI-unsplash (1).jpg";
+imageEl.alt = "It's me)";
