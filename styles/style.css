@@ -1,3 +1,7 @@
 .menu {
     color: blue;
 }
+
+.menu-link__new {
+    color: tomato;
+}
