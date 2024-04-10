@@ -59,3 +59,9 @@ console.log(navEl.classList);
 navEl.classList.add("super-class"); // adding new class
 navEl.classList.remove("super-class");
 navEl.classList.toggle("superb"); // if not exist - add, if exist - delete
+navEl.classList.replace("superb", "qwerty");
+console.log(navEl.classList.contains("qwerty"));
+
+const currentEl = "/home";
+const linkEl = document.querySelector(`.site-nav__link[href="${currentEl}"]`);
+linkEl.classList.add("menu-link__new");
