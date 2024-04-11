@@ -72,3 +72,28 @@ const firstNavEl = navElNav.firstElementChild;
 console.log(firstNavEl);
 console.log(navElNav.children);
 console.log(navElNav.lastElementChild);
+
+// elements creation
+const titleEl = document.createElement("h1");
+titleEl.classList.add("page-title");
+titleEl.textContent = "this is header";
+console.log(titleEl);
+
+const imageElem = document.createElement("img");
+imageElem.src = "/images/brecht-corbeel-qHx3w6Gwz9k-unsplash.jpg";
+imageElem.alt = "python";
+imageElem.width = 350;
+console.log(imageElem);
+document.body.appendChild(imageElem);
+
+const navItemEl = document.createElement("li");
+navItemEl.classList.add("site-nav__item");
+const navLinkEl = document.createElement("a");
+navLinkEl.classList.add("site-nav__link");
+navLinkEl.textContent = "Private Cabinet";
+navLinkEl.href = "/profile";
+console.log(navLinkEl);
+navItemEl.appendChild(navLinkEl);
+console.log(navItemEl);
+
+navElNav.appendChild(navItemEl);
