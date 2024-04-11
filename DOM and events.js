@@ -65,3 +65,10 @@ console.log(navEl.classList.contains("qwerty"));
 const currentEl = "/home";
 const linkEl = document.querySelector(`.site-nav__link[href="${currentEl}"]`);
 linkEl.classList.add("menu-link__new");
+
+// navigation on DOM elements
+const navElNav = document.querySelector(".site-nav");
+const firstNavEl = navElNav.firstElementChild;
+console.log(firstNavEl);
+console.log(navElNav.children);
+console.log(navElNav.lastElementChild);
