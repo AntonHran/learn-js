@@ -136,3 +136,42 @@ const makeColorPickerOptions = (options) => {
 
 const elements = makeColorPickerOptions(ColorPickerOptions);
 colorPickerContainerEl.append(...elements);
+
+// example
+product = {
+  name: "Servodrive",
+  desription:
+    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, sit qui voluptatum iste necessitatibus alias architecto aliquid fugiat quia. Debitis?",
+  price: 2000,
+  available: true,
+  onSale: true,
+};
+
+//what we want to get as a result:
+/*
+<article class="product">
+    <h2 class="product__name">Name</h2>
+    <p class="product__descr">Description</p>
+    <p product__price>Price: 1111 credits</p>
+</article>
+*/
+
+const prouctEl = document.createElement("article");
+prouctEl.classList.add("product");
+
+const nameElEx = document.createElement("h2");
+nameElEx.textContent = product.name;
+nameElEx.classList.add("product__name");
+
+const descrElEx = document.createElement("p");
+descrElEx.textContent = product.desription;
+descrElEx.classList.add("product__descr");
+
+const priceElEx = document.createElement("p");
+priceElEx.textContent = `Price: ${product.price} credits`;
+priceElEx.classList.add("product__price");
+
+prouctEl.append(nameElEx, descrElEx, priceElEx);
+
+const productContainerEl = document.querySelector(".js-product");
+productContainerEl.append(prouctEl);
