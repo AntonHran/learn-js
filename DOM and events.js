@@ -114,13 +114,25 @@ const ColorPickerOptions = [
 
 const colorPickerContainerEl = document.querySelector(".js-color-picker");
 
-const elements = ColorPickerOptions.map((element) => {
-  const buttonEl = document.createElement("button");
-  buttonEl.type = "button";
-  buttonEl.classList.add("color-picker__option");
-  buttonEl.textContent = element.label;
-  buttonEl.style.backgroundColor = element.color;
-  return buttonEl;
-});
+// const elements = ColorPickerOptions.map((element) => {
+//   const buttonEl = document.createElement("button");
+//   buttonEl.type = "button";
+//   buttonEl.classList.add("color-picker__option");
+//   buttonEl.textContent = element.label;
+//   buttonEl.style.backgroundColor = element.color;
+//   return buttonEl;
+// });
 
+const makeColorPickerOptions = (options) => {
+  return options.map((element) => {
+    const buttonEl = document.createElement("button");
+    buttonEl.type = "button";
+    buttonEl.classList.add("color-picker__option");
+    buttonEl.textContent = element.label;
+    buttonEl.style.backgroundColor = element.color;
+    return buttonEl;
+  });
+};
+
+const elements = makeColorPickerOptions(ColorPickerOptions);
 colorPickerContainerEl.append(...elements);
