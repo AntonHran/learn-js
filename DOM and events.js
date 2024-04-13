@@ -1,3 +1,7 @@
+import products from "./data/products.js";
+
+//console.log(products);
+
 // elements
 
 const listWithClass = document.querySelector(".menu");
@@ -138,7 +142,7 @@ const elements = makeColorPickerOptions(ColorPickerOptions);
 colorPickerContainerEl.append(...elements);
 
 // example
-product = {
+const product = {
   name: "Servodrive",
   desription:
     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, sit qui voluptatum iste necessitatibus alias architecto aliquid fugiat quia. Debitis?",
