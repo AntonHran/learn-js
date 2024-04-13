@@ -1,7 +1,7 @@
 export default [
   {
     name: "Servodrive",
-    desription:
+    description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, sit qui voluptatum iste necessitatibus alias architecto aliquid fugiat quia. Debitis?",
     price: 2000,
     available: true,
@@ -9,7 +9,7 @@ export default [
   },
   {
     name: "Field generator",
-    desription:
+    description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, sit qui voluptatum iste necessitatibus alias architecto aliquid fugiat quia. Debitis?",
     price: 3000,
     available: false,
@@ -17,7 +17,7 @@ export default [
   },
   {
     name: "Zero element",
-    desription:
+    description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, sit qui voluptatum iste necessitatibus alias architecto aliquid fugiat quia. Debitis?",
     price: 1500,
     available: true,
@@ -25,7 +25,7 @@ export default [
   },
   {
     name: "Titanium",
-    desription:
+    description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, sit qui voluptatum iste necessitatibus alias architecto aliquid fugiat quia. Debitis?",
     price: 2500,
     available: false,
@@ -33,7 +33,7 @@ export default [
   },
   {
     name: "Something else",
-    desription:
+    description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, sit qui voluptatum iste necessitatibus alias architecto aliquid fugiat quia. Debitis?",
     price: 1000,
     available: true,
