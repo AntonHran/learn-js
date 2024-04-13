@@ -1,4 +1,5 @@
 import products from "./data/products.js";
+import transactions from "./data/transactions.js";
 
 //console.log(products);
 
@@ -194,3 +195,26 @@ const titleEl1 = document.querySelector(".title");
 titleEl1.innerHTML = "<a href=''>This is a header)</a>";
 titleEl1.insertAdjacentHTML("beforeend", "<a href=''>This is a link)</a>");
 titleEl1.insertAdjacentHTML("afterbegin", "<a href=''>This is a new link)</a>");
+
+// innerHTML example
+const makeTransactionTableRowMarkup = (transaction) => {
+  const { id, amount, date, businnes, type, account, name } = transaction;
+  return `<tr>
+      <td>${id}</td>
+      <td>${amount}</td>
+      <td>${date}</td>
+      <td>${businnes}</td>
+      <td>${type}</td>
+      <td>${name}</td>
+      <td>${account}</td>
+    </tr>`;
+};
+
+const tableEl = document.querySelector(".js-transaction-table");
+console.log(transactions);
+const makeTransactionTableRow = transactions
+  .map(makeTransactionTableRowMarkup)
+  .join();
+console.log(makeTransactionTableRow);
+
+tableEl.insertAdjacentHTML("beforeend", makeTransactionTableRow);
