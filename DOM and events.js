@@ -183,6 +183,8 @@ const makeProductCard = ({ name, description, price }) => {
   return productEl;
 };
 
-const addNewEl = makeProductCard(products[1]);
+// const addNewEl = makeProductCard(products[1]); --> for creating one element from object products!
 // console.log(addNewEl);
-productContainerEl.append(addNewEl);
+
+const elementsFromObject = products.map(makeProductCard);
+productContainerEl.append(...elementsFromObject);
