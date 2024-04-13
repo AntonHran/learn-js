@@ -188,3 +188,9 @@ const makeProductCard = ({ name, description, price }) => {
 
 const elementsFromObject = products.map(makeProductCard);
 productContainerEl.append(...elementsFromObject);
+
+// innerHTML
+const titleEl1 = document.querySelector(".title");
+titleEl1.innerHTML = "<a href=''>This is a header)</a>";
+titleEl1.insertAdjacentHTML("beforeend", "<a href=''>This is a link)</a>");
+titleEl1.insertAdjacentHTML("afterbegin", "<a href=''>This is a new link)</a>");
