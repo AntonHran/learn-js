@@ -142,14 +142,15 @@ const elements = makeColorPickerOptions(ColorPickerOptions);
 colorPickerContainerEl.append(...elements);
 
 // example
-const product = {
-  name: "Servodrive",
-  desription:
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, sit qui voluptatum iste necessitatibus alias architecto aliquid fugiat quia. Debitis?",
-  price: 2000,
-  available: true,
-  onSale: true,
-};
+
+// const product = { --> for one element!
+//   name: "Servodrive",
+//   description:
+//     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, sit qui voluptatum iste necessitatibus alias architecto aliquid fugiat quia. Debitis?",
+//   price: 2000,
+//   available: true,
+//   onSale: true,
+// };
 
 //what we want to get as a result:
 /*
@@ -160,22 +161,28 @@ const product = {
 </article>
 */
 
-const prouctEl = document.createElement("article");
-prouctEl.classList.add("product");
-
-const nameElEx = document.createElement("h2");
-nameElEx.textContent = product.name;
-nameElEx.classList.add("product__name");
-
-const descrElEx = document.createElement("p");
-descrElEx.textContent = product.desription;
-descrElEx.classList.add("product__descr");
-
-const priceElEx = document.createElement("p");
-priceElEx.textContent = `Price: ${product.price} credits`;
-priceElEx.classList.add("product__price");
-
-prouctEl.append(nameElEx, descrElEx, priceElEx);
-
 const productContainerEl = document.querySelector(".js-product");
-productContainerEl.append(prouctEl);
+
+const makeProductCard = ({ name, description, price }) => {
+  const productEl = document.createElement("article");
+  productEl.classList.add("product");
+
+  const nameElEx = document.createElement("h2");
+  nameElEx.textContent = name;
+  nameElEx.classList.add("product__name");
+
+  const descrElEx = document.createElement("p");
+  descrElEx.textContent = description;
+  descrElEx.classList.add("product__descr");
+
+  const priceElEx = document.createElement("p");
+  priceElEx.textContent = `Price: ${price} credits`;
+  priceElEx.classList.add("product__price");
+
+  productEl.append(nameElEx, descrElEx, priceElEx);
+  return productEl;
+};
+
+const addNewEl = makeProductCard(products[1]);
+// console.log(addNewEl);
+productContainerEl.append(addNewEl);
