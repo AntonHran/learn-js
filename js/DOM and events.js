@@ -1,5 +1,5 @@
-import products from "./data/products.js";
-import transactions from "./data/transactions.js";
+import products from "../data/products.js";
+import transactions from "../data/transactions.js";
 
 //console.log(products);
 
