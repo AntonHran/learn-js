@@ -17,7 +17,7 @@ descendant.addEventListener("click", (event) => {
   console.log("Descendant click handler");
 });
 
-//
+// new ex.
 
 const colorPalette = document.querySelector(".color-palette");
 const output = document.querySelector(".output");
