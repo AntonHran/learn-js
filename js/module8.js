@@ -17,3 +17,6 @@ class Hero {
     this._name = newName;
   }
 }
+
+const h = Hero("mango");
+console.log(h);
