@@ -18,5 +18,7 @@ class Hero {
   }
 }
 
-const h = Hero("mango");
+const h = new Hero("mango");
 console.log(h);
+
+console.log(h._name);
