@@ -20,3 +20,5 @@ class Hero {
 
 const h = new Hero("mango");
 console.log(h);
+
+//new ex.
